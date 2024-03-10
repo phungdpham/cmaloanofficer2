@@ -1,0 +1,2940 @@
+{
+  "data": [
+    {
+      "type": "instance",
+      "subtype": "app-instance",
+      "componentId": "app",
+      "id": 4012120,
+      "isVisible": true,
+      "children": []
+    }
+  ],
+  "components": [
+    {
+      "id": "app",
+      "type": "component",
+      "subtype": "app-component",
+      "kit": "tailwind",
+      "isVisible": true,
+      "code": "",
+      "globalStyle": "",
+      "muiTheme": "{\n\n}",
+      "children": [
+        {
+          "type": "instance",
+          "subtype": "page-instance",
+          "componentId": 9216528,
+          "id": 6240364,
+          "isVisible": true,
+          "children": []
+        },
+        {
+          "type": "instance",
+          "subtype": "page-instance",
+          "componentId": 215336,
+          "id": 8296735,
+          "isVisible": true,
+          "children": []
+        },
+        {
+          "type": "instance",
+          "subtype": "page-instance",
+          "componentId": 2086123,
+          "id": 7291518,
+          "isVisible": true,
+          "children": []
+        },
+        {
+          "type": "instance",
+          "subtype": "page-instance",
+          "componentId": 3882596,
+          "id": 6539050,
+          "isVisible": true,
+          "children": []
+        },
+        {
+          "type": "instance",
+          "componentId": 6779215,
+          "id": 8155740,
+          "attributes": "{\n  // Size (sm, md, lg)\n  size: \"md\",  \n  // Background color (class name)\n  bgColor: \"bg-white\",\n  // Background image URL\n  bgImage: \"\",\n  // Background image opacity (0-1)\n  bgImageOpacity: 1,\n  // Text color (class name)\n  textColor: \"\",\n  // Stick to bottom of page\n  sticky: false,\n}",
+          "isVisible": true,
+          "children": [],
+          "libraryName": "Footer",
+          "creator": "tailkit"
+        }
+      ]
+    },
+    {
+      "type": "component",
+      "id": 5895224,
+      "name": "Section",
+      "code": "  const {\n    size,\n    bgColor = \"bg-white\",\n    textColor,\n    bgImage,\n    bgImageOpacity,\n    bgImageRepeat,\n    className,\n    children,\n    ...otherProps\n  } = props;\n",
+      "children": [
+        {
+          "type": "element",
+          "tagName": "section",
+          "id": 9317042,
+          "attributes": "{\n\t...otherProps,\n}",
+          "classNames": [
+            "section",
+            "relative"
+          ],
+          "classNameExpressions": [
+            {
+              "js": "bgColor",
+              "classNames": [
+                "{bgColor}"
+              ]
+            },
+            {
+              "js": "textColor",
+              "classNames": [
+                "{textColor}"
+              ]
+            },
+            {
+              "js": "className",
+              "classNames": [
+                "{className}"
+              ]
+            }
+          ],
+          "children": [
+            {
+              "type": "if",
+              "js": "bgImage",
+              "id": 6320663,
+              "children": [
+                {
+                  "type": "instance",
+                  "componentId": 8344332,
+                  "id": 1729353,
+                  "attributes": "{\n\timage: bgImage,\n  opacity: bgImageOpacity,\n  repeat: bgImageRepeat,\n}",
+                  "isVisible": true,
+                  "children": []
+                }
+              ],
+              "isVisible": true
+            },
+            {
+              "type": "element",
+              "tagName": "div",
+              "id": 9027450,
+              "classNames": [
+                "[&>.container]:relative"
+              ],
+              "classNameExpressions": [
+                {
+                  "js": "size === \"sm\"",
+                  "classNames": [
+                    "py-10"
+                  ]
+                },
+                {
+                  "js": "size === \"md\"",
+                  "classNames": [
+                    "py-10",
+                    "md:py-20"
+                  ]
+                },
+                {
+                  "js": "size === \"lg\"",
+                  "classNames": [
+                    "py-10",
+                    "md:py-32"
+                  ]
+                }
+              ],
+              "children": [
+                {
+                  "type": "children",
+                  "id": 3573817,
+                  "isVisible": true
+                }
+              ],
+              "isVisible": true,
+              "attributes": "{\n\n}",
+              "image": "",
+              "name": "",
+              "style": ""
+            }
+          ],
+          "isVisible": true,
+          "image": "",
+          "name": "",
+          "style": ""
+        }
+      ],
+      "isVisible": true,
+      "nameLibrary": "",
+      "description": "",
+      "tags": [],
+      "creator": "",
+      "muiStyle": "{\n\n}"
+    },
+    {
+      "type": "component",
+      "id": 8344332,
+      "name": "BackgroundImage",
+      "children": [
+        {
+          "type": "element",
+          "tagName": "div",
+          "id": 9299448,
+          "attributes": "{\n\tstyle: {\n \t\t\"--image\": `url(\"${props.image}\")`,\n \t\t\"--opacity\": props.opacity,\n  }\n}",
+          "classNames": [
+            "bg-[image:var(--image)]",
+            "opacity-[var(--opacity)]",
+            "absolute",
+            "top-0",
+            "left-0",
+            "bottom-0",
+            "right-0",
+            "z-0"
+          ],
+          "classNameExpressions": [
+            {
+              "js": "props.repeat",
+              "classNames": [
+                "bg-auto",
+                "bg-left-top",
+                "bg-repeat"
+              ]
+            },
+            {
+              "js": "!props.repeat",
+              "classNames": [
+                "bg-center",
+                "bg-cover"
+              ]
+            }
+          ],
+          "isVisible": true,
+          "image": "",
+          "name": "",
+          "style": "",
+          "children": []
+        }
+      ],
+      "isVisible": true,
+      "nameLibrary": "",
+      "description": "",
+      "tags": [],
+      "creator": "",
+      "code": "",
+      "muiStyle": "{\n\n}"
+    },
+    {
+      "type": "component",
+      "id": 8076449,
+      "name": "SectionHeader",
+      "code": "  // Render nothing if no title or subtitle\n  if (!props.title && !props.subtitle && !props.strapline) {\n    return null;\n  }",
+      "children": [
+        {
+          "type": "element",
+          "tagName": "header",
+          "id": 9312029,
+          "classNames": [
+            "mb-8",
+            "last:mb-0"
+          ],
+          "classNameExpressions": [
+            {
+              "js": "props.className",
+              "classNames": [
+                "{props.className}"
+              ]
+            }
+          ],
+          "children": [
+            {
+              "type": "if",
+              "js": "props.strapline",
+              "id": 4950644,
+              "children": [
+                {
+                  "type": "element",
+                  "tagName": "div",
+                  "id": 1712672,
+                  "classNames": [
+                    "text-sm",
+                    "uppercase",
+                    "font-bold",
+                    "tracking-wider",
+                    "mb-1",
+                    "text-blue-700"
+                  ],
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "{props.strapline}",
+                      "id": 6224629,
+                      "isVisible": true
+                    }
+                  ],
+                  "isVisible": true,
+                  "attributes": "{\n\n}",
+                  "image": "",
+                  "name": "",
+                  "classNameExpressions": [],
+                  "style": ""
+                }
+              ],
+              "isVisible": true
+            },
+            {
+              "type": "if",
+              "js": "props.title",
+              "id": 5402917,
+              "children": [
+                {
+                  "type": "element",
+                  "tagName": "h1",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "{props.title}",
+                      "id": 5074113,
+                      "isVisible": true
+                    }
+                  ],
+                  "id": 9375869,
+                  "classNames": [
+                    "text-3xl",
+                    "md:text-4xl",
+                    "font-extrabold"
+                  ],
+                  "isVisible": true,
+                  "attributes": "{\n\n}",
+                  "image": "",
+                  "name": "",
+                  "classNameExpressions": [],
+                  "style": ""
+                }
+              ],
+              "isVisible": true
+            },
+            {
+              "type": "if",
+              "js": "props.subtitle",
+              "id": 6405559,
+              "children": [
+                {
+                  "type": "element",
+                  "tagName": "h2",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "{props.subtitle}",
+                      "id": 3095860,
+                      "isVisible": true
+                    }
+                  ],
+                  "id": 8752740,
+                  "classNames": [
+                    "mt-4",
+                    "inline-block",
+                    "text-lg",
+                    "md:text-xl",
+                    "md:leading-relaxed",
+                    "font-medium",
+                    "max-w-screen-md",
+                    "opacity-80"
+                  ],
+                  "isVisible": true,
+                  "attributes": "{\n\n}",
+                  "image": "",
+                  "name": "",
+                  "classNameExpressions": [],
+                  "style": ""
+                }
+              ],
+              "isVisible": true
+            }
+          ],
+          "isVisible": true,
+          "attributes": "{\n\n}",
+          "image": "",
+          "name": "",
+          "style": ""
+        }
+      ],
+      "isVisible": true,
+      "nameLibrary": "",
+      "description": "",
+      "tags": [],
+      "creator": "",
+      "muiStyle": "{\n\n}"
+    },
+    {
+      "type": "component",
+      "subtype": "external-component",
+      "name": "CubeTransparentIcon",
+      "module": {
+        "moduleName": "heroicons",
+        "modulePath": "@heroicons/react/24/solid",
+        "default": "",
+        "named": "CubeTransparentIcon"
+      },
+      "id": 2077465,
+      "isVisible": true,
+      "nameLibrary": "",
+      "description": "",
+      "tags": [],
+      "children": []
+    },
+    {
+      "type": "component",
+      "name": "HeroSection",
+      "children": [
+        {
+          "type": "instance",
+          "componentId": 5895224,
+          "id": 2407759,
+          "attributes": "{\n\tsize: props.size,\n  bgColor: props.bgColor,\n  bgImage: props.bgImage, \n  bgImageOpacity: props.bgImageOpacity,\n  textColor: props.textColor,\n}",
+          "children": [
+            {
+              "type": "element",
+              "tagName": "div",
+              "id": 3875456,
+              "classNames": [
+                "space-y-16",
+                "container"
+              ],
+              "children": [
+                {
+                  "type": "element",
+                  "tagName": "div",
+                  "id": 7010967,
+                  "children": [
+                    {
+                      "type": "instance",
+                      "componentId": 2077465,
+                      "id": 6446528,
+                      "attributes": "{\n\tclassName: \"text-blue-600 mb-5 inline-block w-16 h-16\"\n}",
+                      "isVisible": true,
+                      "children": []
+                    },
+                    {
+                      "type": "instance",
+                      "componentId": 8076449,
+                      "id": 3221883,
+                      "attributes": "{\n\ttitle: props.title,\n  subtitle: props.subtitle,\n  strapline: props.strapline,\n  className: \"lg:w-1/2\",\n}",
+                      "isVisible": true,
+                      "children": []
+                    }
+                  ],
+                  "isVisible": true,
+                  "attributes": "{\n\n}",
+                  "image": "",
+                  "name": "",
+                  "classNames": [],
+                  "classNameExpressions": [],
+                  "style": ""
+                },
+                {
+                  "type": "element",
+                  "tagName": "div",
+                  "id": 6199817,
+                  "classNames": [
+                    "flex",
+                    "space-x-2"
+                  ],
+                  "children": [
+                    {
+                      "type": "element",
+                      "tagName": "div",
+                      "id": 1982378,
+                      "children": [
+                        {
+                          "type": "element",
+                          "tagName": "img",
+                          "attributes": "{\n  src: props.leftImage,\n  alt: \"\",\n  className: \"rounded-lg\",\n}",
+                          "id": 141919,
+                          "isVisible": true,
+                          "image": "",
+                          "name": "",
+                          "classNames": [],
+                          "classNameExpressions": [],
+                          "style": "",
+                          "children": []
+                        }
+                      ],
+                      "isVisible": true,
+                      "attributes": "{\n\n}",
+                      "image": "",
+                      "name": "",
+                      "classNames": [],
+                      "classNameExpressions": [],
+                      "style": ""
+                    },
+                    {
+                      "type": "element",
+                      "tagName": "div",
+                      "id": 8462885,
+                      "children": [
+                        {
+                          "type": "element",
+                          "tagName": "img",
+                          "attributes": "{\n  src: props.rightImage,\n  alt: \"\",\n  className: \"rounded-lg\",\n}",
+                          "id": 9146229,
+                          "isVisible": true,
+                          "image": "",
+                          "name": "",
+                          "classNames": [],
+                          "classNameExpressions": [],
+                          "style": "",
+                          "children": []
+                        }
+                      ],
+                      "isVisible": true,
+                      "attributes": "{\n\n}",
+                      "image": "",
+                      "name": "",
+                      "classNames": [],
+                      "classNameExpressions": [],
+                      "style": ""
+                    }
+                  ],
+                  "isVisible": true,
+                  "attributes": "{\n\n}",
+                  "image": "",
+                  "name": "",
+                  "classNameExpressions": [],
+                  "style": ""
+                },
+                {
+                  "type": "element",
+                  "tagName": "div",
+                  "id": 3309707,
+                  "classNames": [
+                    "grid",
+                    "grid-cols-1",
+                    "md:grid-cols-3",
+                    "gap-16"
+                  ],
+                  "children": [
+                    {
+                      "type": "foreach",
+                      "id": 7729512,
+                      "valName": "item",
+                      "indexName": "index",
+                      "objectName": "items",
+                      "children": [
+                        {
+                          "type": "element",
+                          "tagName": "div",
+                          "id": 7073596,
+                          "attributes": "{\n\tkey: index,\n}",
+                          "children": [
+                            {
+                              "type": "element",
+                              "tagName": "h3",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "tagName": "item.icon",
+                                  "id": 3549702,
+                                  "classNames": [
+                                    "inline-block",
+                                    "w-5",
+                                    "h-5"
+                                  ],
+                                  "classNameExpressions": [
+                                    {
+                                      "js": "item.iconColor",
+                                      "classNames": [
+                                        "{item.iconColor}"
+                                      ]
+                                    }
+                                  ],
+                                  "isVisible": true,
+                                  "attributes": "{\n\n}",
+                                  "image": "",
+                                  "name": "",
+                                  "style": "",
+                                  "children": []
+                                },
+                                {
+                                  "type": "element",
+                                  "tagName": "span",
+                                  "id": 722228,
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "{item.title}",
+                                      "id": 8082181,
+                                      "isVisible": true
+                                    }
+                                  ],
+                                  "isVisible": true,
+                                  "attributes": "{\n\n}",
+                                  "image": "",
+                                  "name": "",
+                                  "classNames": [],
+                                  "classNameExpressions": [],
+                                  "style": ""
+                                }
+                              ],
+                              "id": 4534782,
+                              "classNames": [
+                                "flex",
+                                "items-center",
+                                "space-x-2",
+                                "text-lg",
+                                "font-bold",
+                                "uppercase",
+                                "tracking-wide",
+                                "mb-2"
+                              ],
+                              "isVisible": true,
+                              "attributes": "{\n\n}",
+                              "image": "",
+                              "name": "",
+                              "classNameExpressions": [],
+                              "style": ""
+                            },
+                            {
+                              "type": "element",
+                              "tagName": "p",
+                              "id": 629563,
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "{item.description}",
+                                  "id": 9386880,
+                                  "isVisible": true
+                                }
+                              ],
+                              "classNames": [
+                                "leading-relaxed",
+                                "text-gray-600"
+                              ],
+                              "isVisible": true,
+                              "attributes": "{\n\n}",
+                              "image": "",
+                              "name": "",
+                              "classNameExpressions": [],
+                              "style": ""
+                            }
+                          ],
+                          "isVisible": true,
+                          "image": "",
+                          "name": "",
+                          "classNames": [],
+                          "classNameExpressions": [],
+                          "style": ""
+                        }
+                      ],
+                      "isVisible": true,
+                      "objectType": "array"
+                    }
+                  ],
+                  "isVisible": false,
+                  "attributes": "{\n\n}",
+                  "image": "",
+                  "name": "",
+                  "classNameExpressions": [],
+                  "style": ""
+                }
+              ],
+              "isVisible": true,
+              "attributes": "{\n\n}",
+              "image": "",
+              "name": "",
+              "classNameExpressions": [],
+              "style": ""
+            }
+          ],
+          "isVisible": true
+        }
+      ],
+      "code": "  const items = [\n    {\n      title: \"Passion\",\n      description:\n        \"We are passionate with what we do and love crafting products that can make your life easier and help you succeed. We pay attention to small details and always aiming for the best.\",\n      icon: HI.HeartIcon,\n      iconColor: \"text-red-500\",\n    },\n    {\n      title: \"Commitment\",\n      description:\n        \"We are committed to our work and stand by our projects. Our aim is to improve them in every update and offer the most full-featured packages with the smallest possible footprint.\",\n      icon: HI.ArrowDownIcon,\n      iconColor: \"text-blue-500\",\n    },\n    {\n      title: \"Less is more\",\n      description:\n        \"We believe that design should be invisible and enhance the user experience, not get in the way. This gives room for your content to breath and attracts your users’ attention.\",\n      icon: HI.CubeTransparentIcon,\n      iconColor: \"text-pink-500\",\n    },\n  ];\n",
+      "id": 5183771,
+      "tags": [
+        "Hero",
+        "Popular"
+      ],
+      "creator": "tailkit",
+      "description": "Hero with logo, two column image grid, and three column info grid",
+      "isVisible": true,
+      "nameLibrary": "",
+      "muiStyle": "{\n\n}"
+    },
+    {
+      "type": "component",
+      "subtype": "page-component",
+      "path": "",
+      "children": [
+        {
+          "type": "instance",
+          "componentId": 5183771,
+          "id": 9241598,
+          "attributes": "{\n  // Text content\n  title: <><span className=\"font-light text-2xl text-blue-700\">Hi There! </span><br/>I'm Phung</>,\n  subtitle: \"A True  Advisor Delivering Values and Expertise for your home & business loans\",\n  strapline: \"\",\n  // Size (sm, md, lg)\n  size: \"md\",  \n  // Background color (class name)\n  bgColor: \"bg-white\",\n  // Background image URL\n  bgImage: \"\",\n  // Background image opacity (0-1)\n  bgImageOpacity: 1,\n  // Text color (class name)\n  textColor: \"\",\n  // Images\n  leftImage: \"https://images.unsplash.com/photo-1542744173-8e7e53415bb0?crop=entropy&fit=crop&h=800&w=1280\",  \t\t\n  rightImage: \"https://images.unsplash.com/photo-1554232456-8727aae0cfa4?crop=entropy&fit=crop&h=800&q=80&w=600\",\n}",
+          "isVisible": true,
+          "children": [],
+          "libraryName": "HeroSection",
+          "creator": "tailkit"
+        },
+        {
+          "type": "instance",
+          "componentId": 1543705,
+          "id": 2033163,
+          "attributes": "{\n  // Text content\n  title: \"The best tech under the hood\",\n  subtitle: \"Build user friendly and modern dashboards using the latest tech. Now is the time with a best selling UI framework.\",\n  strapline: \"Created with passion\",\n  // Size (sm, md, lg)\n  size: \"md\",  \n  // Background color (class name)\n  bgColor: \"bg-white\",\n  // Background image URL\n  bgImage: \"\",\n  // Background image opacity (0-1)\n  bgImageOpacity: 1,\n  // Text color (class name)\n  textColor: \"\",\n}",
+          "isVisible": true,
+          "children": [],
+          "libraryName": "FeaturesSection",
+          "creator": "tailkit"
+        },
+        {
+          "type": "instance",
+          "componentId": 8821921,
+          "id": 1764436,
+          "attributes": "{\n  // Text content\n  title: \"Get in touch\",\n  subtitle: \"If something does not make sense, feel free to contact us and we will get back to you as soon as possible.\",\n  strapline: \"\",\n  // Size (sm, md, lg)\n  size: \"md\",  \n  // Background color (class name)\n  bgColor: \"bg-blue-900\",\n  // Background image URL\n  bgImage: \"https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?crop=entropy&fit=crop&h=800&q=80&w=1280\",\n  // Background image opacity (0-1)\n  bgImageOpacity: 0.17,\n  // Text color (class name)\n  textColor: \"text-white\",\n}",
+          "isVisible": true,
+          "children": [],
+          "libraryName": "ContactSection",
+          "creator": "tailkit"
+        }
+      ],
+      "id": 9216528,
+      "isVisible": true,
+      "code": "",
+      "description": "",
+      "requireAuth": false
+    },
+    {
+      "type": "component",
+      "name": "Footer",
+      "children": [
+        {
+          "type": "instance",
+          "componentId": 5895224,
+          "id": 1781506,
+          "attributes": "{\n\tsize: props.size,\n  bgColor: props.bgColor,\n  bgImage: props.bgImage, \n  bgImageOpacity: props.bgImageOpacity,\n  textColor: props.textColor,\n  className: props.sticky && 'mt-auto',\n}",
+          "children": [
+            {
+              "type": "element",
+              "tagName": "footer",
+              "id": 1354482,
+              "classNames": [
+                "container"
+              ],
+              "children": [
+                {
+                  "type": "element",
+                  "tagName": "div",
+                  "id": 9925551,
+                  "classNames": [
+                    "flex",
+                    "flex-col",
+                    "md:flex-row-reverse",
+                    "md:justify-between",
+                    "space-y-6",
+                    "md:space-y-0",
+                    "text-center",
+                    "md:text-left",
+                    "text-sm",
+                    "lg:text-base"
+                  ],
+                  "children": [
+                    {
+                      "type": "element",
+                      "tagName": "nav",
+                      "id": 415562,
+                      "classNames": [
+                        "space-x-4"
+                      ],
+                      "children": [
+                        {
+                          "type": "foreach",
+                          "id": 5179759,
+                          "valName": "link",
+                          "indexName": "index",
+                          "objectName": "[               {                 url: \"https://twitter.com\",                 icon: (                   <path d=\"M24 4.557a9.83 9.83 0 01-2.828.775 4.932 4.932 0 002.165-2.724 9.864 9.864 0 01-3.127 1.195 4.916 4.916 0 00-3.594-1.555c-3.179 0-5.515 2.966-4.797 6.045A13.978 13.978 0 011.671 3.149a4.93 4.93 0 001.523 6.574 4.903 4.903 0 01-2.229-.616c-.054 2.281 1.581 4.415 3.949 4.89a4.935 4.935 0 01-2.224.084 4.928 4.928 0 004.6 3.419A9.9 9.9 0 010 19.54a13.94 13.94 0 007.548 2.212c9.142 0 14.307-7.721 13.995-14.646A10.025 10.025 0 0024 4.557z\" />                 ),               },               {                 url: \"https://facebook.com\",                 icon: (                   <path d=\"M9 8H6v4h3v12h5V12h3.642L18 8h-4V6.333C14 5.378 14.192 5 15.115 5H18V0h-3.808C10.596 0 9 1.583 9 4.615V8z\" />                 ),               },               {                 url: \"https://instagram.com\",                 icon: (                   <path d=\"M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z\" />                 ),               },               {                 url: \"https://github.com/\",                 icon: (                   <path d=\"M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z\" />                 ),               },             ]",
+                          "children": [
+                            {
+                              "type": "element",
+                              "tagName": "a",
+                              "attributes": "{\n  href: link.url,\n  target: \"_blank\",\n  rel: \"noreferrer\",\n  key: index,\n}",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "tagName": "svg",
+                                  "id": 2709787,
+                                  "attributes": "{\n\tfill: \"currentColor\",\n  viewBox: \"0 0 24 24\",\n}",
+                                  "classNames": [
+                                    "inline-block",
+                                    "w-5",
+                                    "h-5"
+                                  ],
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "{link.icon}",
+                                      "id": 4188845,
+                                      "isVisible": true
+                                    }
+                                  ],
+                                  "isVisible": true,
+                                  "image": "",
+                                  "name": "",
+                                  "classNameExpressions": [],
+                                  "style": ""
+                                }
+                              ],
+                              "id": 6717425,
+                              "classNames": [
+                                "text-gray-400",
+                                "hover:text-blue-600"
+                              ],
+                              "isVisible": true,
+                              "image": "",
+                              "name": "",
+                              "classNameExpressions": [],
+                              "style": ""
+                            }
+                          ],
+                          "isVisible": true,
+                          "objectType": "array"
+                        }
+                      ],
+                      "isVisible": true,
+                      "attributes": "{\n\n}",
+                      "image": "",
+                      "name": "",
+                      "classNameExpressions": [],
+                      "style": ""
+                    },
+                    {
+                      "type": "element",
+                      "tagName": "nav",
+                      "id": 7291906,
+                      "classNames": [
+                        "space-x-5",
+                        "sm:space-x-7"
+                      ],
+                      "children": [
+                        {
+                          "type": "foreach",
+                          "id": 6279559,
+                          "valName": "link",
+                          "indexName": "index",
+                          "objectName": "[               { url: \"/about\", name: \"About\" },               { url: \"/legal/terms-of-service\", name: \"Terms of Service\" },               { url: \"/legal/privacy-policy\", name: \"Privacy Policy\" },             ]",
+                          "children": [
+                            {
+                              "type": "element",
+                              "tagName": "a",
+                              "attributes": "{\n  href: link.url,\n  key: index,\n}",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "{link.name}",
+                                  "id": 8776984,
+                                  "isVisible": true
+                                }
+                              ],
+                              "id": 983579,
+                              "classNames": [
+                                "font-medium",
+                                "text-gray-600",
+                                "hover:text-gray-500"
+                              ],
+                              "isVisible": true,
+                              "image": "",
+                              "name": "",
+                              "classNameExpressions": [],
+                              "style": ""
+                            }
+                          ],
+                          "isVisible": true,
+                          "objectType": "array"
+                        }
+                      ],
+                      "isVisible": true,
+                      "attributes": "{\n\n}",
+                      "image": "",
+                      "name": "",
+                      "classNameExpressions": [],
+                      "style": ""
+                    },
+                    {
+                      "type": "element",
+                      "tagName": "div",
+                      "id": 5773220,
+                      "classNames": [
+                        "text-gray-600"
+                      ],
+                      "children": [
+                        {
+                          "type": "element",
+                          "tagName": "span",
+                          "id": 6470136,
+                          "classNames": [
+                            "font-medium"
+                          ],
+                          "children": [
+                            {
+                              "type": "text",
+                              "text": "Company Inc",
+                              "id": 8989481,
+                              "isVisible": true
+                            }
+                          ],
+                          "isVisible": true,
+                          "attributes": "{\n\n}",
+                          "image": "",
+                          "name": "",
+                          "classNameExpressions": [],
+                          "style": ""
+                        },
+                        {
+                          "type": "text",
+                          "text": "{\" \"}©",
+                          "id": 4466745,
+                          "isVisible": true
+                        }
+                      ],
+                      "isVisible": true,
+                      "attributes": "{\n\n}",
+                      "image": "",
+                      "name": "",
+                      "classNameExpressions": [],
+                      "style": ""
+                    }
+                  ],
+                  "isVisible": true,
+                  "attributes": "{\n\n}",
+                  "image": "",
+                  "name": "",
+                  "classNameExpressions": [],
+                  "style": ""
+                }
+              ],
+              "isVisible": true,
+              "attributes": "{\n\n}",
+              "image": "",
+              "name": "",
+              "classNameExpressions": [],
+              "style": ""
+            }
+          ],
+          "isVisible": true
+        }
+      ],
+      "tags": [
+        "Footer",
+        "Popular"
+      ],
+      "id": 6779215,
+      "creator": "tailkit",
+      "description": "Footer with row of links",
+      "isVisible": true,
+      "nameLibrary": "",
+      "code": "",
+      "muiStyle": "{\n\n}"
+    },
+    {
+      "type": "component",
+      "id": 9616840,
+      "name": "FeatureIcon",
+      "code": "  const { \n    color = \"orange\", \n    size = \"normal\", \n  } = props;\n\n  const classes = {\n    color: {\n      orange: {\n        outer: \"bg-orange-300\",\n        inner: \"bg-orange-700\",\n      },\n      red: {\n        outer: \"bg-red-300\",\n        inner: \"bg-red-700\",\n      },\n      emerald: {\n        outer: \"bg-emerald-300\",\n        inner: \"bg-emerald-700\",\n      },\n      purple: {\n        outer: \"bg-purple-300\",\n        inner: \"bg-purple-700\",\n      },\n      blue: {\n        outer: \"bg-blue-300\",\n        inner: \"bg-blue-700\",\n      },\n      pink: {\n        outer: \"bg-pink-300\",\n        inner: \"bg-pink-700\",\n      },\n    },\n    size: {\n      normal: {\n        wrap: \"w-11 h-11 m-2\",\n        outer: \"-m-2\",\n        inner: \"\",\n        icon: \"w-5 h-5\",\n      },\n      large: {\n        wrap: \"w-12 h-12 m-5\",\n        outer: \"-m-5\",\n        inner: \"-m-2\",\n        icon: \"w-8 h-8\",\n      },\n    },\n  };\n",
+      "children": [
+        {
+          "type": "element",
+          "tagName": "div",
+          "id": 2808110,
+          "classNames": [
+            "inline-flex",
+            "items-center",
+            "justify-center",
+            "relative",
+            "{classes.size[size].wrap}"
+          ],
+          "classNameExpressions": [
+            {
+              "js": "props.className",
+              "classNames": [
+                "{props.className}"
+              ]
+            }
+          ],
+          "children": [
+            {
+              "type": "element",
+              "tagName": "div",
+              "id": 2360005,
+              "classNames": [
+                "absolute",
+                "inset-0",
+                "rounded-3xl",
+                "transform",
+                "rotate-6",
+                "transition",
+                "ease-out",
+                "duration-200",
+                "group-hover:-rotate-3",
+                "group-hover:scale-105",
+                "{classes.color[color].outer}",
+                "{classes.size[size].outer}"
+              ],
+              "isVisible": true,
+              "attributes": "{\n\n}",
+              "image": "",
+              "name": "",
+              "classNameExpressions": [],
+              "style": "",
+              "children": []
+            },
+            {
+              "type": "element",
+              "tagName": "div",
+              "id": 4496258,
+              "classNames": [
+                "absolute",
+                "inset-0",
+                "rounded-2xl",
+                "transform",
+                "-rotate-6",
+                "bg-opacity-75",
+                "shadow-inner",
+                "transition",
+                "ease-out",
+                "duration-200",
+                "group-hover:rotate-2",
+                "group-hover:scale-105",
+                "{classes.color[color].inner}",
+                "{classes.size[size].inner}"
+              ],
+              "isVisible": true,
+              "attributes": "{\n\n}",
+              "image": "",
+              "name": "",
+              "classNameExpressions": [],
+              "style": "",
+              "children": []
+            },
+            {
+              "type": "element",
+              "tagName": "div",
+              "id": 3670912,
+              "classNames": [
+                "text-white",
+                "relative",
+                "transform",
+                "transition",
+                "ease-out",
+                "duration-200",
+                "group-hover:scale-110",
+                "inline-block",
+                "{classes.size[size].icon}"
+              ],
+              "children": [
+                {
+                  "type": "children",
+                  "id": 1450984,
+                  "isVisible": true
+                }
+              ],
+              "isVisible": true,
+              "attributes": "{\n\n}",
+              "image": "",
+              "name": "",
+              "classNameExpressions": [],
+              "style": ""
+            }
+          ],
+          "isVisible": true,
+          "attributes": "{\n\n}",
+          "image": "",
+          "name": "",
+          "style": ""
+        }
+      ],
+      "isVisible": true,
+      "nameLibrary": "",
+      "description": "",
+      "tags": [],
+      "creator": "",
+      "muiStyle": "{\n\n}"
+    },
+    {
+      "type": "component",
+      "id": 3741985,
+      "name": "Button",
+      "code": "\tconst {\n    size = \"md\",\n    variant = \"primary\",\n    type = \"button\",\n    children,\n    onClick,\n    className,\n    disabled = false,\n    href,\n    target,\n    isBlock = false,\n    startIcon,\n    endIcon,\n    component,\n    ...buttonProps\n  } = props;\n\n  // Element to render\n  const Element = component \n  \t? component \n  \t: props.href ? \"a\" : \"button\";\n\n  // Tailwind classes\n  const classes = {\n    base: \"inline-flex justify-center items-center border font-semibold focus:outline-none rounded focus:ring disabled:opacity-50\",\n    link: \"whitespace-nowrap\",\n    block: \"block w-full\",\n    size: {\n      sm: \"px-3 py-2 leading-5 text-sm space-x-2\",\n      md: \"px-3 py-2 leading-6 space-x-3\",\n      lg: \"px-4 py-3 leading-6 space-x-3\",\n      xl: \"px-6 py-4 leading-6 space-x-3\",\n    },\n    variant: {\n      primary:\n        \"border-blue-700 bg-blue-700 text-white hover:text-white hover:bg-blue-800 hover:border-blue-800 focus:ring-blue-500 focus:ring-opacity-50 active:bg-blue-700 active:border-blue-700\",\n      secondary:\n        \"border-blue-200 bg-blue-200 text-blue-700 hover:text-blue-700 hover:bg-blue-300 hover:border-blue-300 focus:ring-blue-500 focus:ring-opacity-50 active:bg-blue-200 active:border-blue-200\",\n      simple:\n        \"border-gray-300 bg-white text-gray-800 shadow-sm hover:text-gray-800 hover:bg-gray-100 hover:border-gray-300 hover:shadow focus:ring-gray-500 focus:ring-opacity-25 active:bg-white active:border-white\",\n      light:\n        \"border-gray-200 bg-gray-200 text-gray-700 hover:text-gray-700 hover:bg-gray-300 hover:border-gray-300 focus:ring-gray-500 focus:ring-opacity-25 active:bg-gray-200 active:border-gray-200\",\n      dark: \"border-gray-700 bg-gray-700 text-white hover:text-white hover:bg-gray-800 hover:border-gray-800 focus:ring-gray-500 focus:ring-opacity-25 active:bg-gray-700 active:border-gray-700\",\n    },\n  };\n",
+      "children": [
+        {
+          "type": "element",
+          "tagName": "Element",
+          "id": 2663832,
+          "attributes": "{\n\thref: href,\n  target: target,\n  type: type,\n  onClick: onClick,\n  disabled: disabled,\n  ...buttonProps,\n}",
+          "classNames": [
+            "{classes.base}",
+            "{classes.size[size]}",
+            "{classes.variant[variant]}"
+          ],
+          "classNameExpressions": [
+            {
+              "js": "Element === \"a\"",
+              "classNames": [
+                "{classes.link}"
+              ]
+            },
+            {
+              "js": "isBlock",
+              "classNames": [
+                "{classes.block}"
+              ]
+            },
+            {
+              "js": "className",
+              "classNames": [
+                "{className}"
+              ]
+            }
+          ],
+          "children": [
+            {
+              "type": "if",
+              "js": "startIcon",
+              "id": 3698614,
+              "children": [
+                {
+                  "type": "element",
+                  "tagName": "span",
+                  "id": 175421,
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "{startIcon}",
+                      "id": 4989247,
+                      "isVisible": true
+                    }
+                  ],
+                  "isVisible": true,
+                  "attributes": "{\n\n}",
+                  "image": "",
+                  "name": "",
+                  "classNames": [],
+                  "classNameExpressions": [],
+                  "style": ""
+                }
+              ],
+              "isVisible": true
+            },
+            {
+              "type": "if",
+              "js": "children",
+              "id": 5016154,
+              "children": [
+                {
+                  "type": "element",
+                  "tagName": "span",
+                  "id": 2150889,
+                  "children": [
+                    {
+                      "type": "children",
+                      "id": 4320319,
+                      "isVisible": true
+                    }
+                  ],
+                  "isVisible": true,
+                  "attributes": "{\n\n}",
+                  "image": "",
+                  "name": "",
+                  "classNames": [],
+                  "classNameExpressions": [],
+                  "style": ""
+                }
+              ],
+              "isVisible": true
+            },
+            {
+              "type": "if",
+              "js": "endIcon",
+              "id": 4711988,
+              "children": [
+                {
+                  "type": "element",
+                  "tagName": "span",
+                  "id": 6641920,
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "{endIcon}",
+                      "id": 7032357,
+                      "isVisible": true
+                    }
+                  ],
+                  "isVisible": true,
+                  "attributes": "{\n\n}",
+                  "image": "",
+                  "name": "",
+                  "classNames": [],
+                  "classNameExpressions": [],
+                  "style": ""
+                }
+              ],
+              "isVisible": true
+            }
+          ],
+          "isVisible": true,
+          "image": "",
+          "name": "",
+          "style": ""
+        }
+      ],
+      "forwardRef": true,
+      "isVisible": true,
+      "nameLibrary": "",
+      "description": "",
+      "tags": [],
+      "creator": "",
+      "muiStyle": "{\n\n}"
+    },
+    {
+      "type": "component",
+      "id": 9894556,
+      "name": "TextField",
+      "code": "  const {\n    error,\n    type = \"text\",\n    size = \"md\",\n    label,\n    className,\n    inputRef,\n    ...inputProps\n  } = props;  \n\n\tconst classes = {\n    base: \"block border placeholder-gray-400 z-10 w-full rounded active:z-10 focus:z-10 -mr-px border-gray-200 focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50\",\n    size: {\n      sm: \"py-2 leading-5\",\n      md: \"px-4 py-3 leading-6\",\n      lg: \"\",\n    },\n  };\n",
+      "children": [
+        {
+          "type": "element",
+          "tagName": "div",
+          "id": 4698684,
+          "classNames": [
+            "w-full"
+          ],
+          "classNameExpressions": [
+            {
+              "js": "className",
+              "classNames": [
+                "{className}"
+              ]
+            }
+          ],
+          "children": [
+            {
+              "type": "if",
+              "js": "label",
+              "id": 4189335,
+              "children": [
+                {
+                  "type": "element",
+                  "tagName": "label",
+                  "id": 3465724,
+                  "attributes": "{\n\thtmlFor: props.id,\n}",
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "{label}",
+                      "id": 9773132,
+                      "isVisible": true
+                    }
+                  ],
+                  "classNames": [
+                    "block",
+                    "mb-1",
+                    "font-medium"
+                  ],
+                  "isVisible": true,
+                  "image": "",
+                  "name": "",
+                  "classNameExpressions": [],
+                  "style": ""
+                }
+              ],
+              "isVisible": true
+            },
+            {
+              "type": "if",
+              "js": "type === \"textarea\"",
+              "id": 2463369,
+              "children": [
+                {
+                  "type": "element",
+                  "tagName": "textarea",
+                  "id": 7518885,
+                  "attributes": "{\n\tref: inputRef,\n\t...inputProps,\n}",
+                  "classNames": [
+                    "{classes.base}",
+                    "{classes.size[size]}"
+                  ],
+                  "isVisible": true,
+                  "image": "",
+                  "name": "",
+                  "classNameExpressions": [],
+                  "style": "",
+                  "children": []
+                }
+              ],
+              "isVisible": true
+            },
+            {
+              "type": "if",
+              "js": "type !== \"textarea\"",
+              "id": 972599,
+              "children": [
+                {
+                  "type": "element",
+                  "tagName": "input",
+                  "id": 3895023,
+                  "attributes": "{\n\tref: inputRef,\n  type: type,\n\t...inputProps,\n}",
+                  "classNames": [
+                    "{classes.base}",
+                    "{classes.size[size]}"
+                  ],
+                  "isVisible": true,
+                  "image": "",
+                  "name": "",
+                  "classNameExpressions": [],
+                  "style": "",
+                  "children": []
+                }
+              ],
+              "isVisible": true
+            },
+            {
+              "type": "if",
+              "js": "error",
+              "id": 5081845,
+              "children": [
+                {
+                  "type": "element",
+                  "tagName": "p",
+                  "id": 2452609,
+                  "children": [
+                    {
+                      "type": "text",
+                      "text": "{error.message}",
+                      "id": 8057762,
+                      "isVisible": true
+                    }
+                  ],
+                  "classNames": [
+                    "text-sm",
+                    "text-left",
+                    "text-red-600",
+                    "mt-1"
+                  ],
+                  "isVisible": true,
+                  "attributes": "{\n\n}",
+                  "image": "",
+                  "name": "",
+                  "classNameExpressions": [],
+                  "style": ""
+                }
+              ],
+              "isVisible": true
+            }
+          ],
+          "isVisible": true,
+          "attributes": "{\n\n}",
+          "image": "",
+          "name": "",
+          "style": ""
+        }
+      ],
+      "isVisible": true,
+      "nameLibrary": "",
+      "description": "",
+      "tags": [],
+      "creator": "",
+      "muiStyle": "{\n\n}"
+    },
+    {
+      "type": "component",
+      "id": 8182717,
+      "name": "LoadingIcon",
+      "children": [
+        {
+          "type": "element",
+          "tagName": "svg",
+          "id": 1044390,
+          "attributes": "{\n\tfill: \"none\",\n  viewBox: \"0 0 24 24\",\n}",
+          "classNames": [
+            "animate-spin"
+          ],
+          "classNameExpressions": [
+            {
+              "js": "props.className",
+              "classNames": [
+                "{props.className}"
+              ]
+            }
+          ],
+          "children": [
+            {
+              "type": "element",
+              "tagName": "circle",
+              "id": 6675694,
+              "attributes": "{\n\tcx: \"12\",\n  cy: \"12\",\n  r: \"10\",\n  stroke: \"currentColor\",\n  strokeWidth: \"4\",\n}",
+              "classNames": [
+                "opacity-25"
+              ],
+              "isVisible": true,
+              "image": "",
+              "name": "",
+              "classNameExpressions": [],
+              "style": "",
+              "children": []
+            },
+            {
+              "type": "element",
+              "tagName": "path",
+              "id": 8113593,
+              "attributes": "{\n\tfill: \"currentColor\",\n  d: \"M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z\",\n}",
+              "classNames": [
+                "opacity-50"
+              ],
+              "isVisible": true,
+              "image": "",
+              "name": "",
+              "classNameExpressions": [],
+              "style": "",
+              "children": []
+            }
+          ],
+          "isVisible": true,
+          "image": "",
+          "name": "",
+          "style": ""
+        }
+      ],
+      "isVisible": true,
+      "nameLibrary": "",
+      "description": "",
+      "tags": [],
+      "creator": "",
+      "code": "",
+      "muiStyle": "{\n\n}"
+    },
+    {
+      "type": "component",
+      "name": "FormAlert",
+      "children": [
+        {
+          "type": "element",
+          "tagName": "div",
+          "id": 2040251,
+          "classNames": [
+            "text-center",
+            "p-4",
+            "rounded"
+          ],
+          "classNameExpressions": [
+            {
+              "js": "props.type === \"error\"",
+              "classNames": [
+                "text-red-600",
+                "bg-red-50"
+              ]
+            },
+            {
+              "js": "props.type === \"success\"",
+              "classNames": [
+                "text-green-600",
+                "bg-green-50"
+              ]
+            }
+          ],
+          "children": [
+            {
+              "type": "text",
+              "text": "{props.message}",
+              "id": 9455984,
+              "isVisible": true
+            }
+          ],
+          "isVisible": true,
+          "attributes": "{\n\n}",
+          "image": "",
+          "name": "",
+          "style": ""
+        }
+      ],
+      "id": 831632,
+      "isVisible": true,
+      "nameLibrary": "",
+      "description": "",
+      "tags": [],
+      "creator": "",
+      "code": "",
+      "muiStyle": "{\n\n}"
+    },
+    {
+      "type": "component",
+      "subtype": "page-component",
+      "path": "business-loans",
+      "id": 2086123,
+      "isVisible": true,
+      "code": "",
+      "description": "",
+      "requireAuth": false,
+      "children": [
+        {
+          "type": "instance",
+          "componentId": 9939909,
+          "id": 5398624,
+          "attributes": "{\n  // Text content\n  title: \"Business Loan Program\",\n  subtitle: \"\",\n  strapline: \"\",\n  // Size (sm, md, lg)\n  size: \"md\",  \n  // Background color (class name)\n  bgColor: \"bg-white\",\n  // Background image URL\n  bgImage: \"\",\n  // Background image opacity (0-1)\n  bgImageOpacity: 1,\n  // Text color (class name)\n  textColor: \"\",\n}",
+          "isVisible": true,
+          "children": [],
+          "libraryName": "ContentSection",
+          "creator": "tailkit"
+        },
+        {
+          "type": "instance",
+          "componentId": 8821921,
+          "id": 3684165,
+          "attributes": "{\n  // Text content\n  title: \"Get in touch\",\n  subtitle: \"If something does not make sense, feel free to contact us and we will get back to you as soon as possible.\",\n  strapline: \"\",\n  // Size (sm, md, lg)\n  size: \"md\",  \n  // Background color (class name)\n  bgColor: \"bg-blue-900\",\n  // Background image URL\n  bgImage: \"https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?crop=entropy&fit=crop&h=800&q=80&w=1280\",\n  // Background image opacity (0-1)\n  bgImageOpacity: 0.17,\n  // Text color (class name)\n  textColor: \"text-white\",\n}",
+          "isVisible": true,
+          "children": [],
+          "libraryName": "ContactSection",
+          "creator": "tailkit"
+        }
+      ]
+    },
+    {
+      "type": "component",
+      "name": "FeaturesSection",
+      "children": [
+        {
+          "type": "instance",
+          "componentId": 5895224,
+          "id": 9045294,
+          "attributes": "{\n\tsize: props.size,\n  bgColor: props.bgColor,\n  bgImage: props.bgImage, \n  bgImageOpacity: props.bgImageOpacity,\n  textColor: props.textColor,\n}",
+          "children": [
+            {
+              "type": "element",
+              "tagName": "div",
+              "id": 5455421,
+              "classNames": [
+                "space-y-16",
+                "container"
+              ],
+              "children": [
+                {
+                  "type": "instance",
+                  "componentId": 8076449,
+                  "id": 5187985,
+                  "attributes": "{\n\ttitle: props.title,\n  subtitle: props.subtitle,\n  strapline: props.strapline,\n  className: \"text-center\",\n}",
+                  "isVisible": true,
+                  "children": []
+                },
+                {
+                  "type": "element",
+                  "tagName": "div",
+                  "id": 3500758,
+                  "classNames": [
+                    "grid",
+                    "grid-cols-1",
+                    "gap-4",
+                    "md:gap-5",
+                    "md:grid-cols-2"
+                  ],
+                  "children": [
+                    {
+                      "type": "foreach",
+                      "id": 9759199,
+                      "valName": "feature",
+                      "indexName": "index",
+                      "objectName": "features",
+                      "children": [
+                        {
+                          "type": "element",
+                          "tagName": "div",
+                          "id": 1670522,
+                          "attributes": "{\n\tkey: index,\n}",
+                          "classNames": [
+                            "group",
+                            "p-5",
+                            "transition",
+                            "ease-out",
+                            "duration-200",
+                            "rounded-2xl",
+                            "text-center"
+                          ],
+                          "children": [
+                            {
+                              "type": "instance",
+                              "componentId": 9616840,
+                              "id": 752758,
+                              "attributes": "{\n\tcolor: feature.iconColor,\n  size: \"large\",\n  className: \"mb-12\",\n}",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "tagName": "feature.icon",
+                                  "id": 9980802,
+                                  "isVisible": true,
+                                  "attributes": "{\n\n}",
+                                  "image": "",
+                                  "name": "",
+                                  "classNames": [],
+                                  "classNameExpressions": [],
+                                  "style": "",
+                                  "children": []
+                                }
+                              ],
+                              "isVisible": true
+                            },
+                            {
+                              "type": "element",
+                              "tagName": "h4",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "{feature.title}",
+                                  "id": 8554058,
+                                  "isVisible": true
+                                }
+                              ],
+                              "id": 8707398,
+                              "classNames": [
+                                "text-lg",
+                                "font-bold",
+                                "mb-2"
+                              ],
+                              "isVisible": true,
+                              "attributes": "{\n\n}",
+                              "image": "",
+                              "name": "",
+                              "classNameExpressions": [],
+                              "style": ""
+                            },
+                            {
+                              "type": "element",
+                              "tagName": "p",
+                              "id": 1820393,
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "{feature.description}",
+                                  "id": 3421299,
+                                  "isVisible": true
+                                }
+                              ],
+                              "classNames": [
+                                "leading-relaxed",
+                                "text-gray-600"
+                              ],
+                              "isVisible": true,
+                              "attributes": "{\n\n}",
+                              "image": "",
+                              "name": "",
+                              "classNameExpressions": [],
+                              "style": ""
+                            }
+                          ],
+                          "isVisible": true,
+                          "image": "",
+                          "name": "",
+                          "classNameExpressions": [],
+                          "style": ""
+                        }
+                      ],
+                      "isVisible": true,
+                      "objectType": "array"
+                    }
+                  ],
+                  "isVisible": true,
+                  "attributes": "{\n\n}",
+                  "image": "",
+                  "name": "",
+                  "classNameExpressions": [],
+                  "style": ""
+                }
+              ],
+              "isVisible": true,
+              "attributes": "{\n\n}",
+              "image": "",
+              "name": "",
+              "classNameExpressions": [],
+              "style": ""
+            }
+          ],
+          "isVisible": true
+        }
+      ],
+      "code": "  const features = [\n    {\n      title: \"Customizable\",\n      description:\n        \"Fusce purus nisi, gravida sed consectetur ut, interdum quis nisi. Quisque egestas nisl id lectus facilisis scelerisque. Proin rhoncus dui at ligula vestibulum ut facilisis.\",\n      icon: HI.AdjustmentsVerticalIcon,\n      iconColor: \"orange\",\n    },\n    {\n      title: \"Rich Statistics\",\n      description:\n        \"Fusce purus nisi, gravida sed consectetur ut, interdum quis nisi. Quisque egestas nisl id lectus facilisis scelerisque. Proin rhoncus dui at ligula vestibulum ut facilisis.\",\n      icon: HI.ChartPieIcon,\n      iconColor: \"red\",\n    },\n\n    {\n      title: \"Works globally\",\n      description:\n        \"Fusce purus nisi, gravida sed consectetur ut, interdum quis nisi. Quisque egestas nisl id lectus facilisis scelerisque. Proin rhoncus dui at ligula vestibulum ut facilisis.\",\n      icon: HI.GlobeAmericasIcon,\n      iconColor: \"emerald\",\n    },\n    {\n      title: \"Lighting fast UI\",\n      description:\n        \"Fusce purus nisi, gravida sed consectetur ut, interdum quis nisi. Quisque egestas nisl id lectus facilisis scelerisque. Proin rhoncus dui at ligula vestibulum ut facilisis.\",\n      icon: HI.BoltIcon,\n      iconColor: \"purple\",\n    },\n    {\n      title: \"Components\",\n      description:\n        \"Fusce purus nisi, gravida sed consectetur ut, interdum quis nisi. Quisque egestas nisl id lectus facilisis scelerisque. Proin rhoncus dui at ligula vestibulum ut facilisis.\",\n      icon: HI.PuzzlePieceIcon,\n      iconColor: \"blue\",\n    },\n    {\n      title: \"Auto Auth\",\n      description:\n        \"Fusce purus nisi, gravida sed consectetur ut, interdum quis nisi. Quisque egestas nisl id lectus facilisis scelerisque. Proin rhoncus dui at ligula vestibulum ut facilisis.\",\n      icon: HI.UsersIcon,\n      iconColor: \"pink\",\n    },\n  ];\n",
+      "id": 1543705,
+      "tags": [
+        "Features",
+        "Popular"
+      ],
+      "creator": "tailkit",
+      "description": "Features in three column grid with icons",
+      "isVisible": true,
+      "nameLibrary": "",
+      "muiStyle": "{\n\n}"
+    },
+    {
+      "type": "component",
+      "subtype": "page-component",
+      "path": "home-loans",
+      "isVisible": true,
+      "code": "",
+      "description": "",
+      "requireAuth": false,
+      "children": [
+        {
+          "type": "instance",
+          "componentId": 9939909,
+          "id": 8234149,
+          "attributes": "{\n  // Text content\n  title: \"Home Loan Programs\",\n  subtitle: \"\",\n  strapline: \"\",\n  // Size (sm, md, lg)\n  size: \"md\",  \n  // Background color (class name)\n  bgColor: \"bg-white\",\n  // Background image URL\n  bgImage: \"\",\n  // Background image opacity (0-1)\n  bgImageOpacity: 1,\n  // Text color (class name)\n  textColor: \"\",\n}",
+          "isVisible": true,
+          "children": [],
+          "libraryName": "ContentSection",
+          "creator": "tailkit"
+        },
+        {
+          "type": "instance",
+          "componentId": 8821921,
+          "id": 1766329,
+          "attributes": "{\n  // Text content\n  title: \"Get in touch\",\n  subtitle: \"If something does not make sense, feel free to contact us and we will get back to you as soon as possible.\",\n  strapline: \"\",\n  // Size (sm, md, lg)\n  size: \"md\",  \n  // Background color (class name)\n  bgColor: \"bg-blue-900\",\n  // Background image URL\n  bgImage: \"https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?crop=entropy&fit=crop&h=800&q=80&w=1280\",\n  // Background image opacity (0-1)\n  bgImageOpacity: 0.17,\n  // Text color (class name)\n  textColor: \"text-white\",\n}",
+          "isVisible": true,
+          "children": [],
+          "libraryName": "ContactSection",
+          "creator": "tailkit"
+        }
+      ],
+      "id": 215336
+    },
+    {
+      "type": "component",
+      "name": "ContactSection",
+      "children": [
+        {
+          "type": "instance",
+          "componentId": 5895224,
+          "id": 778088,
+          "attributes": "{\n\tsize: props.size,\n  bgColor: props.bgColor,\n  bgImage: props.bgImage, \n  bgImageOpacity: props.bgImageOpacity,\n  textColor: props.textColor,\n}",
+          "children": [
+            {
+              "type": "element",
+              "tagName": "div",
+              "id": 48612,
+              "classNames": [
+                "container"
+              ],
+              "children": [
+                {
+                  "type": "element",
+                  "tagName": "div",
+                  "id": 1119045,
+                  "classNames": [
+                    "flex",
+                    "flex-col",
+                    "lg:flex-row",
+                    "lg:items-center",
+                    "space-y-16",
+                    "lg:space-y-0",
+                    "lg:space-x-16"
+                  ],
+                  "children": [
+                    {
+                      "type": "element",
+                      "tagName": "div",
+                      "id": 8120476,
+                      "classNames": [
+                        "lg:w-2/5"
+                      ],
+                      "children": [
+                        {
+                          "type": "instance",
+                          "componentId": 8076449,
+                          "id": 1660648,
+                          "attributes": "{\n\ttitle: props.title,\n  subtitle: props.subtitle,\n  strapline: props.strapline,\n}",
+                          "isVisible": true,
+                          "children": []
+                        },
+                        {
+                          "type": "element",
+                          "tagName": "div",
+                          "id": 5419579,
+                          "classNames": [
+                            "opacity-70",
+                            "mt-10"
+                          ],
+                          "children": [
+                            {
+                              "type": "element",
+                              "tagName": "h4",
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "Company Inc.",
+                                  "id": 6360612,
+                                  "isVisible": true
+                                }
+                              ],
+                              "id": 2134801,
+                              "classNames": [
+                                "uppercase",
+                                "font-semibold",
+                                "tracking-wider",
+                                "mb-4"
+                              ],
+                              "isVisible": true,
+                              "attributes": "{\n\n}",
+                              "image": "",
+                              "name": "",
+                              "classNameExpressions": [],
+                              "style": ""
+                            },
+                            {
+                              "type": "element",
+                              "tagName": "div",
+                              "id": 9090543,
+                              "classNames": [
+                                "leading-relaxed"
+                              ],
+                              "children": [
+                                {
+                                  "type": "text",
+                                  "text": "1080 Sunshine Valley, Suite 2563\n<br />\nSan Francisco, CA 85214\n<br />\n<abbr title=\"Phone\">P:</abbr> (123) 456-7890",
+                                  "id": 2861243,
+                                  "isVisible": true
+                                }
+                              ],
+                              "isVisible": true,
+                              "attributes": "{\n\n}",
+                              "image": "",
+                              "name": "",
+                              "classNameExpressions": [],
+                              "style": ""
+                            }
+                          ],
+                          "isVisible": true,
+                          "attributes": "{\n\n}",
+                          "image": "",
+                          "name": "",
+                          "classNameExpressions": [],
+                          "style": ""
+                        }
+                      ],
+                      "isVisible": true,
+                      "attributes": "{\n\n}",
+                      "image": "",
+                      "name": "",
+                      "classNameExpressions": [],
+                      "style": ""
+                    },
+                    {
+                      "type": "element",
+                      "tagName": "div",
+                      "id": 5868322,
+                      "classNames": [
+                        "lg:w-3/5",
+                        "p-2",
+                        "bg-white",
+                        "bg-opacity-10",
+                        "rounded-xl"
+                      ],
+                      "children": [
+                        {
+                          "type": "element",
+                          "tagName": "div",
+                          "id": 4046439,
+                          "classNames": [
+                            "bg-white",
+                            "text-black",
+                            "rounded-lg",
+                            "p-6"
+                          ],
+                          "children": [
+                            {
+                              "type": "if",
+                              "js": "formAlert",
+                              "id": 9926661,
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "tagName": "div",
+                                  "id": 2795448,
+                                  "classNames": [
+                                    "mb-6"
+                                  ],
+                                  "children": [
+                                    {
+                                      "type": "instance",
+                                      "componentId": 831632,
+                                      "id": 4228143,
+                                      "attributes": "{\n\ttype: formAlert.type,\n  message: formAlert.message,\n}",
+                                      "isVisible": true,
+                                      "children": []
+                                    }
+                                  ],
+                                  "isVisible": true,
+                                  "attributes": "{\n\n}",
+                                  "image": "",
+                                  "name": "",
+                                  "classNameExpressions": [],
+                                  "style": ""
+                                }
+                              ],
+                              "isVisible": true
+                            },
+                            {
+                              "type": "element",
+                              "tagName": "form",
+                              "id": 9103470,
+                              "attributes": "{\n\tonSubmit: handleSubmit(onSubmit),\n}",
+                              "classNames": [
+                                "space-y-6"
+                              ],
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "tagName": "div",
+                                  "id": 5601953,
+                                  "classNames": [
+                                    "grid",
+                                    "grid-cols-1",
+                                    "sm:grid-cols-2",
+                                    "gap-6"
+                                  ],
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "tagName": "div",
+                                      "id": 1747013,
+                                      "children": [
+                                        {
+                                          "type": "instance",
+                                          "componentId": 9894556,
+                                          "id": 4591465,
+                                          "attributes": "{\n\ttype: \"text\",\n  label: \"Name\",\n  id: \"name\",\n  name: \"name\",\n  placeholder: \"\",\n  error: errors.name,\n  inputRef: register(),\n}",
+                                          "isVisible": true,
+                                          "children": []
+                                        }
+                                      ],
+                                      "isVisible": true,
+                                      "attributes": "{\n\n}",
+                                      "image": "",
+                                      "name": "",
+                                      "classNames": [],
+                                      "classNameExpressions": [],
+                                      "style": ""
+                                    },
+                                    {
+                                      "type": "element",
+                                      "tagName": "div",
+                                      "id": 9439210,
+                                      "children": [
+                                        {
+                                          "type": "instance",
+                                          "componentId": 9894556,
+                                          "id": 9091532,
+                                          "attributes": "{\n\ttype: \"email\",\n  label: \"Email\",\n  id: \"email\",\n  name: \"email\",\n  placeholder: \"\",\n  error: errors.email,\n  inputRef: register({\n  \trequired: \"Please enter an email address\",\n  }),\n}",
+                                          "isVisible": true,
+                                          "children": []
+                                        }
+                                      ],
+                                      "isVisible": true,
+                                      "attributes": "{\n\n}",
+                                      "image": "",
+                                      "name": "",
+                                      "classNames": [],
+                                      "classNameExpressions": [],
+                                      "style": ""
+                                    }
+                                  ],
+                                  "isVisible": true,
+                                  "attributes": "{\n\n}",
+                                  "image": "",
+                                  "name": "",
+                                  "classNameExpressions": [],
+                                  "style": ""
+                                },
+                                {
+                                  "type": "element",
+                                  "tagName": "div",
+                                  "id": 3391466,
+                                  "children": [
+                                    {
+                                      "type": "instance",
+                                      "componentId": 9894556,
+                                      "id": 4631981,
+                                      "attributes": "{\n\ttype: \"textarea\",\n  label: \"Message\",\n  id: \"message\",\n  name: \"message\",\n  placeholder: \"\",\n  error: errors.message,\n  rows: 6,\n  inputRef: register({\n  \trequired: \"Please enter a message\",\n  }),\n}",
+                                      "isVisible": true,
+                                      "children": []
+                                    }
+                                  ],
+                                  "isVisible": true,
+                                  "attributes": "{\n\n}",
+                                  "image": "",
+                                  "name": "",
+                                  "classNames": [],
+                                  "classNameExpressions": [],
+                                  "style": ""
+                                },
+                                {
+                                  "type": "instance",
+                                  "componentId": 3741985,
+                                  "id": 8232374,
+                                  "attributes": "{\n  type: \"submit\",\n  size: \"lg\",\n  disabled: pending,\n  isBlock: true,\n  startIcon: !pending && <HI.PaperAirplaneIcon className=\"opacity-50 inline-block w-5 h-5\" />,\n  className: \"w-48\",\n}",
+                                  "children": [
+                                    {
+                                      "type": "if",
+                                      "js": "!pending",
+                                      "id": 8475607,
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "Send message",
+                                          "id": 2767005,
+                                          "isVisible": true
+                                        }
+                                      ],
+                                      "isVisible": true
+                                    },
+                                    {
+                                      "type": "if",
+                                      "js": "pending",
+                                      "id": 7953142,
+                                      "children": [
+                                        {
+                                          "type": "instance",
+                                          "componentId": 8182717,
+                                          "id": 7466083,
+                                          "attributes": "{\n\tclassName: \"w-6\",\n}",
+                                          "isVisible": true,
+                                          "children": []
+                                        }
+                                      ],
+                                      "isVisible": true
+                                    }
+                                  ],
+                                  "isVisible": true
+                                }
+                              ],
+                              "isVisible": true,
+                              "image": "",
+                              "name": "",
+                              "classNameExpressions": [],
+                              "style": ""
+                            }
+                          ],
+                          "isVisible": true,
+                          "attributes": "{\n\n}",
+                          "image": "",
+                          "name": "",
+                          "classNameExpressions": [],
+                          "style": ""
+                        }
+                      ],
+                      "isVisible": true,
+                      "attributes": "{\n\n}",
+                      "image": "",
+                      "name": "",
+                      "classNameExpressions": [],
+                      "style": ""
+                    }
+                  ],
+                  "isVisible": true,
+                  "attributes": "{\n\n}",
+                  "image": "",
+                  "name": "",
+                  "classNameExpressions": [],
+                  "style": ""
+                }
+              ],
+              "isVisible": true,
+              "attributes": "{\n\n}",
+              "image": "",
+              "name": "",
+              "classNameExpressions": [],
+              "style": ""
+            }
+          ],
+          "isVisible": true
+        }
+      ],
+      "code": "  const [pending, setPending] = useState(false);\n  const [formAlert, setFormAlert] = useState(null);\n  const { handleSubmit, register, errors, reset } = useForm();\n\n  const onSubmit = (data) => {\n    // Show pending indicator\n    setPending(true);\n\n    console.log(data);\n\n    contact.submit(data)\n      .then(() => {\n        // Clear form\n        reset();\n        // Show success alert message\n        setFormAlert({\n          type: \"success\",\n          message: \"Your message has been sent!\",\n        });\n      })\n      .catch((error) => {\n        // Show error alert message\n        setFormAlert({\n          type: \"error\",\n          message: error.message,\n        });\n      })\n      .finally(() => {\n        // Hide pending indicator\n        setPending(false);\n      });\n  };\n",
+      "id": 8821921,
+      "tags": [
+        "Contact",
+        "Form",
+        "Popular"
+      ],
+      "creator": "tailkit",
+      "description": "Contact form with image background and left aligned company details",
+      "isVisible": true,
+      "nameLibrary": "",
+      "muiStyle": "{\n\n}"
+    },
+    {
+      "type": "component",
+      "subtype": "external-component",
+      "name": "ArrowUpRightIcon",
+      "module": {
+        "moduleName": "heroicons",
+        "modulePath": "@heroicons/react/24/solid",
+        "default": "",
+        "named": "ArrowUpRightIcon"
+      },
+      "id": 3287428,
+      "isVisible": true,
+      "nameLibrary": "",
+      "description": "",
+      "tags": [],
+      "children": []
+    },
+    {
+      "type": "component",
+      "name": "loans",
+      "children": [
+        {
+          "type": "instance",
+          "componentId": 5895224,
+          "id": 4360838,
+          "attributes": "{\n\tsize: props.size,\n  bgColor: props.bgColor,\n  bgImage: props.bgImage, \n  bgImageOpacity: props.bgImageOpacity,\n  textColor: props.textColor,\n}",
+          "children": [
+            {
+              "type": "element",
+              "tagName": "div",
+              "id": 3426338,
+              "classNames": [
+                "space-y-16",
+                "container"
+              ],
+              "children": [
+                {
+                  "type": "instance",
+                  "componentId": 8076449,
+                  "id": 8840608,
+                  "attributes": "{\n\ttitle: props.title,\n  subtitle: props.subtitle,\n  strapline: props.strapline,\n  className: \"text-center\",\n}",
+                  "isVisible": true,
+                  "children": []
+                },
+                {
+                  "type": "element",
+                  "tagName": "div",
+                  "id": 5352501,
+                  "classNames": [
+                    "grid",
+                    "grid-cols-1",
+                    "lg:grid-cols-3",
+                    "gap-4",
+                    "lg:gap-8",
+                    "md:grid-cols-2"
+                  ],
+                  "children": [
+                    {
+                      "type": "foreach",
+                      "id": 1750173,
+                      "valName": "post",
+                      "indexName": "index",
+                      "objectName": "posts",
+                      "children": [
+                        {
+                          "type": "element",
+                          "tagName": "div",
+                          "id": 3045647,
+                          "attributes": "{\n\tkey: index,\n}",
+                          "classNames": [
+                            "flex",
+                            "flex-col",
+                            "items-center",
+                            "bg-white",
+                            "rounded-lg",
+                            "overflow-hidden",
+                            "shadow-sm"
+                          ],
+                          "children": [
+                            {
+                              "type": "element",
+                              "tagName": "a",
+                              "attributes": "{\n  href: post.url,\n}",
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "tagName": "div",
+                                  "id": 913843,
+                                  "classNames": [
+                                    "flex",
+                                    "items-center",
+                                    "justify-center",
+                                    "absolute",
+                                    "inset-0",
+                                    "bg-blue-700",
+                                    "bg-opacity-75",
+                                    "opacity-0",
+                                    "transition",
+                                    "ease-out",
+                                    "duration-150",
+                                    "group-hover:opacity-100"
+                                  ],
+                                  "children": [
+                                    {
+                                      "type": "instance",
+                                      "componentId": 3287428,
+                                      "id": 2907913,
+                                      "attributes": "{\n\tclassName: \"text-white inline-block w-10 h-10\"\n}",
+                                      "isVisible": true,
+                                      "children": []
+                                    }
+                                  ],
+                                  "isVisible": true,
+                                  "attributes": "{\n\n}",
+                                  "image": "",
+                                  "name": "",
+                                  "classNameExpressions": [],
+                                  "style": ""
+                                },
+                                {
+                                  "type": "element",
+                                  "tagName": "img",
+                                  "attributes": "{\n  src: post.image,\n  alt: \"\",\n}",
+                                  "id": 8218518,
+                                  "isVisible": true,
+                                  "image": "",
+                                  "name": "",
+                                  "classNames": [],
+                                  "classNameExpressions": [],
+                                  "style": "",
+                                  "children": []
+                                }
+                              ],
+                              "id": 1369314,
+                              "classNames": [
+                                "block",
+                                "relative",
+                                "group"
+                              ],
+                              "isVisible": true,
+                              "image": "",
+                              "name": "",
+                              "classNameExpressions": [],
+                              "style": ""
+                            },
+                            {
+                              "type": "element",
+                              "tagName": "div",
+                              "id": 8519944,
+                              "classNames": [
+                                "p-5",
+                                "lg:p-6"
+                              ],
+                              "children": [
+                                {
+                                  "type": "element",
+                                  "tagName": "h4",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "tagName": "a",
+                                      "attributes": "{\n  href: post.url, \n}",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "{post.title}",
+                                          "id": 2377929,
+                                          "isVisible": true
+                                        }
+                                      ],
+                                      "id": 5771464,
+                                      "classNames": [
+                                        "leading-7",
+                                        "text-gray-800",
+                                        "hover:text-gray-600"
+                                      ],
+                                      "isVisible": true,
+                                      "image": "",
+                                      "name": "",
+                                      "classNameExpressions": [],
+                                      "style": ""
+                                    }
+                                  ],
+                                  "id": 1418286,
+                                  "classNames": [
+                                    "font-bold",
+                                    "text-lg",
+                                    "sm:text-xl",
+                                    "mb-2"
+                                  ],
+                                  "isVisible": true,
+                                  "attributes": "{\n\n}",
+                                  "image": "",
+                                  "name": "",
+                                  "classNameExpressions": [],
+                                  "style": ""
+                                },
+                                {
+                                  "type": "element",
+                                  "tagName": "p",
+                                  "id": 9774384,
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "tagName": "a",
+                                      "attributes": "{\n  href: post.authorUrl,\n}",
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "{post.authorName}",
+                                          "id": 9605188,
+                                          "isVisible": true
+                                        }
+                                      ],
+                                      "id": 7241863,
+                                      "classNames": [
+                                        "font-medium",
+                                        "text-blue-600",
+                                        "hover:text-blue-400"
+                                      ],
+                                      "isVisible": true,
+                                      "image": "",
+                                      "name": "",
+                                      "classNameExpressions": [],
+                                      "style": ""
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": "{\" \"}on{\" \"}",
+                                      "id": 4347611,
+                                      "isVisible": true
+                                    },
+                                    {
+                                      "type": "element",
+                                      "tagName": "span",
+                                      "id": 2300517,
+                                      "classNames": [
+                                        "font-medium"
+                                      ],
+                                      "children": [
+                                        {
+                                          "type": "text",
+                                          "text": "{post.date}",
+                                          "id": 5280670,
+                                          "isVisible": true
+                                        }
+                                      ],
+                                      "isVisible": true,
+                                      "attributes": "{\n\n}",
+                                      "image": "",
+                                      "name": "",
+                                      "classNameExpressions": [],
+                                      "style": ""
+                                    },
+                                    {
+                                      "type": "text",
+                                      "text": "{\" \"}· {post.readTime} read",
+                                      "id": 2786835,
+                                      "isVisible": true
+                                    }
+                                  ],
+                                  "classNames": [
+                                    "text-gray-600",
+                                    "text-sm",
+                                    "mb-3"
+                                  ],
+                                  "isVisible": true,
+                                  "attributes": "{\n\n}",
+                                  "image": "",
+                                  "name": "",
+                                  "classNameExpressions": [],
+                                  "style": ""
+                                },
+                                {
+                                  "type": "element",
+                                  "tagName": "p",
+                                  "id": 1679922,
+                                  "children": [
+                                    {
+                                      "type": "text",
+                                      "text": "{post.description}",
+                                      "id": 4579607,
+                                      "isVisible": true
+                                    }
+                                  ],
+                                  "classNames": [
+                                    "prose"
+                                  ],
+                                  "isVisible": true,
+                                  "attributes": "{\n\n}",
+                                  "image": "",
+                                  "name": "",
+                                  "classNameExpressions": [],
+                                  "style": ""
+                                },
+                                {
+                                  "type": "if",
+                                  "js": "post.tags && post.tags.length",
+                                  "id": 2232898,
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "tagName": "div",
+                                      "id": 527567,
+                                      "classNames": [
+                                        "space-x-2",
+                                        "mt-3"
+                                      ],
+                                      "children": [
+                                        {
+                                          "type": "foreach",
+                                          "id": 5937509,
+                                          "valName": "tag",
+                                          "indexName": "index",
+                                          "objectName": "post.tags",
+                                          "children": [
+                                            {
+                                              "type": "element",
+                                              "tagName": "a",
+                                              "id": 7124985,
+                                              "attributes": "{\n  href: `/tag/${tag}`,\n\tkey: index,\n}",
+                                              "classNames": [
+                                                "font-semibold",
+                                                "inline-flex",
+                                                "px-2",
+                                                "leading-4",
+                                                "rounded-full",
+                                                "text-blue-700",
+                                                "bg-blue-200",
+                                                "hover:opacity-80",
+                                                "text-xs",
+                                                "py-0.5"
+                                              ],
+                                              "children": [
+                                                {
+                                                  "type": "text",
+                                                  "text": "{tag}",
+                                                  "id": 5180363,
+                                                  "isVisible": true
+                                                }
+                                              ],
+                                              "isVisible": true,
+                                              "image": "",
+                                              "name": "",
+                                              "classNameExpressions": [],
+                                              "style": ""
+                                            }
+                                          ],
+                                          "isVisible": true,
+                                          "objectType": "array"
+                                        }
+                                      ],
+                                      "isVisible": true,
+                                      "attributes": "{\n\n}",
+                                      "image": "",
+                                      "name": "",
+                                      "classNameExpressions": [],
+                                      "style": ""
+                                    }
+                                  ],
+                                  "isVisible": true
+                                }
+                              ],
+                              "isVisible": true,
+                              "attributes": "{\n\n}",
+                              "image": "",
+                              "name": "",
+                              "classNameExpressions": [],
+                              "style": ""
+                            }
+                          ],
+                          "isVisible": true,
+                          "image": "",
+                          "name": "",
+                          "classNameExpressions": [],
+                          "style": ""
+                        }
+                      ],
+                      "isVisible": true,
+                      "objectType": "array"
+                    }
+                  ],
+                  "isVisible": true,
+                  "attributes": "{\n\n}",
+                  "image": "",
+                  "name": "",
+                  "classNameExpressions": [],
+                  "style": ""
+                }
+              ],
+              "isVisible": true,
+              "attributes": "{\n\n}",
+              "image": "",
+              "name": "",
+              "classNameExpressions": [],
+              "style": ""
+            }
+          ],
+          "isVisible": true
+        }
+      ],
+      "code": "  const posts = [\n    {\n      image:\n        \"https://images.unsplash.com/photo-1465056836041-7f43ac27dcb5?fit=crop&w=800&h=600\",\n      title:\n        \"The 10 best hiking trails in the world you should put in your bucket list\",\n      description:\n        \"Integer fermentum tincidunt auctor. Vestibulum ullamcorper, odio sed rhoncus imperdiet, enim elit sollicitudin orci, eget dictum sleo mi nec lectus.\",\n      url: \"/post/10-best-hiking-trails\",\n      tags: [\"travel\", \"adventure\"],\n      authorName: \"Joe Smith\",\n      authorUrl: \"/author/joe-smith\",\n      date: \"March 3, 2021\",\n      readTime: \"12 min\",\n    },\n    {\n      image:\n        \"https://images.unsplash.com/photo-1519681393784-d120267933ba?fit=crop&w=800&h=600\",\n      title: \"The 20 best places in the world for star gazing\",\n      description:\n        \"Integer fermentum tincidunt auctor. Vestibulum ullamcorper, odio sed rhoncus imperdiet, enim elit sollicitudin orci, eget dictum sleo mi nec lectus.\",\n      url: \"/post/20-best-places-star-gazing\",\n      tags: [\"travel\", \"astronomy\"],\n      authorName: \"Lia Baker\",\n      authorUrl: \"/author/lia-baker\",\n      date: \"February 23, 2021\",\n      readTime: \"20 min\",\n    },\n    {\n      image:\n        \"https://images.unsplash.com/photo-1501785888041-af3ef285b470?fit=crop&w=800&h=600\",\n      title:\n        \"How to explore one of the most beautiful lakes in the whole world\",\n      description:\n        \"Integer fermentum tincidunt auctor. Vestibulum ullamcorper, odio sed rhoncus imperdiet, enim elit sollicitudin orci, eget dictum sleo mi nec lectus.\",\n      url: \"/post/how-to-explore-beautiful-lake\",\n      tags: [\"travel\", \"adventure\"],\n      authorName: \"Mark Jones\",\n      authorUrl: \"/author/mark-jones\",\n      date: \"February 15, 2021\",\n      readTime: \"5 min\",\n    },\n  ];\n",
+      "id": 9939909,
+      "tags": [
+        "Content",
+        "Popular"
+      ],
+      "creator": "tailkit",
+      "description": "Blog posts in 3 column grid with header image, title, description, and tags",
+      "isVisible": true,
+      "nameLibrary": "",
+      "muiStyle": "{\n\n}"
+    },
+    {
+      "type": "component",
+      "subtype": "page-component",
+      "path": "loan-details",
+      "id": 3882596,
+      "isVisible": true,
+      "code": "",
+      "description": "",
+      "requireAuth": false,
+      "children": [
+        {
+          "type": "instance",
+          "componentId": 9212235,
+          "id": 5744124,
+          "attributes": "{\n  // Text content\n  title: \"Amazing features packed in a neat package\",\n  subtitle: \"You will love working with your newly updated and customized dashboard.\",\n  strapline: \"It's time to build\",\n  // Size (sm, md, lg)\n  size: \"md\",  \n  // Background color (class name)\n  bgColor: \"bg-white\",\n  // Background image URL\n  bgImage: \"\",\n  // Background image opacity (0-1)\n  bgImageOpacity: 1,\n  // Text color (class name)\n  textColor: \"\",\n}",
+          "isVisible": true,
+          "children": [],
+          "libraryName": "FeaturesSection",
+          "creator": "tailkit"
+        },
+        {
+          "type": "instance",
+          "componentId": 8821921,
+          "id": 9852996,
+          "attributes": "{\n  // Text content\n  title: \"Get in touch\",\n  subtitle: \"If something does not make sense, feel free to contact us and we will get back to you as soon as possible.\",\n  strapline: \"\",\n  // Size (sm, md, lg)\n  size: \"md\",  \n  // Background color (class name)\n  bgColor: \"bg-blue-900\",\n  // Background image URL\n  bgImage: \"https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?crop=entropy&fit=crop&h=800&q=80&w=1280\",\n  // Background image opacity (0-1)\n  bgImageOpacity: 0.17,\n  // Text color (class name)\n  textColor: \"text-white\",\n}",
+          "isVisible": true,
+          "children": [],
+          "libraryName": "ContactSection",
+          "creator": "tailkit"
+        }
+      ]
+    },
+    {
+      "type": "component",
+      "name": "LoanDetails",
+      "children": [
+        {
+          "type": "instance",
+          "componentId": 5895224,
+          "id": 5280320,
+          "attributes": "{\n\tsize: props.size,\n  bgColor: props.bgColor,\n  bgImage: props.bgImage, \n  bgImageOpacity: props.bgImageOpacity,\n  textColor: props.textColor,\n}",
+          "children": [
+            {
+              "type": "element",
+              "tagName": "div",
+              "id": 9295648,
+              "classNames": [
+                "container"
+              ],
+              "children": [
+                {
+                  "type": "element",
+                  "tagName": "div",
+                  "id": 384628,
+                  "classNames": [
+                    "flex",
+                    "flex-col",
+                    "lg:flex-row",
+                    "lg:items-center",
+                    "space-y-12",
+                    "lg:space-y-0",
+                    "lg:space-x-20"
+                  ],
+                  "children": [
+                    {
+                      "type": "element",
+                      "tagName": "div",
+                      "id": 2687442,
+                      "classNames": [
+                        "lg:w-5/12",
+                        "xl:w-5/12",
+                        "md:py-12",
+                        "space-y-10"
+                      ],
+                      "children": [
+                        {
+                          "type": "instance",
+                          "componentId": 8076449,
+                          "id": 2583534,
+                          "attributes": "{\n\ttitle: props.title,\n  subtitle: props.subtitle,\n  strapline: props.strapline,\n}",
+                          "isVisible": true,
+                          "children": []
+                        }
+                      ],
+                      "isVisible": true,
+                      "attributes": "{\n\n}",
+                      "image": "",
+                      "name": "",
+                      "classNameExpressions": [],
+                      "style": ""
+                    },
+                    {
+                      "type": "element",
+                      "tagName": "div",
+                      "id": 6156619,
+                      "classNames": [
+                        "lg:w-7/12",
+                        "xl:w-7/12",
+                        "flex-none",
+                        "relative"
+                      ],
+                      "children": [
+                        {
+                          "type": "element",
+                          "tagName": "div",
+                          "id": 2295020,
+                          "classNames": [
+                            "pattern-dots",
+                            "opacity-10",
+                            "absolute",
+                            "top-0",
+                            "left-0",
+                            "w-48",
+                            "h-64",
+                            "md:mt-20",
+                            "transform",
+                            "-translate-x-10",
+                            "-translate-y-10"
+                          ],
+                          "isVisible": true,
+                          "attributes": "{\n\n}",
+                          "image": "",
+                          "name": "",
+                          "classNameExpressions": [],
+                          "style": "",
+                          "children": []
+                        },
+                        {
+                          "type": "element",
+                          "tagName": "div",
+                          "id": 4937955,
+                          "classNames": [
+                            "pattern-dots",
+                            "opacity-10",
+                            "absolute",
+                            "bottom-0",
+                            "right-0",
+                            "w-48",
+                            "h-64",
+                            "md:mb-20",
+                            "transform",
+                            "translate-x-10",
+                            "translate-y-10"
+                          ],
+                          "isVisible": true,
+                          "attributes": "{\n\n}",
+                          "image": "",
+                          "name": "",
+                          "classNameExpressions": [],
+                          "style": "",
+                          "children": []
+                        },
+                        {
+                          "type": "element",
+                          "tagName": "div",
+                          "id": 8502295,
+                          "classNames": [
+                            "relative",
+                            "flex",
+                            "flex-col",
+                            "md:flex-row",
+                            "md:space-x-6",
+                            "space-y-6",
+                            "md:space-y-0"
+                          ],
+                          "children": [
+                            {
+                              "type": "element",
+                              "tagName": "div",
+                              "id": 7963217,
+                              "classNames": [
+                                "md:w-1/2",
+                                "md:mt-24",
+                                "space-y-6"
+                              ],
+                              "children": [
+                                {
+                                  "type": "foreach",
+                                  "id": 8257638,
+                                  "valName": "feature",
+                                  "indexName": "index",
+                                  "objectName": "features.left",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "tagName": "div",
+                                      "id": 3050089,
+                                      "attributes": "{\n\tkey: index,\n}",
+                                      "classNames": [
+                                        "group",
+                                        "bg-white",
+                                        "p-5",
+                                        "transition",
+                                        "ease-out",
+                                        "duration-200",
+                                        "border-2",
+                                        "border-gray-200",
+                                        "rounded-2xl",
+                                        "hover:border-gray-300"
+                                      ],
+                                      "children": [
+                                        {
+                                          "type": "instance",
+                                          "componentId": 9616840,
+                                          "id": 4887996,
+                                          "attributes": "{\n\tcolor: feature.iconColor,\n  className: \"mb-6\",\n}",
+                                          "children": [
+                                            {
+                                              "type": "element",
+                                              "tagName": "feature.icon",
+                                              "id": 2652291,
+                                              "isVisible": true,
+                                              "attributes": "{\n\n}",
+                                              "image": "",
+                                              "name": "",
+                                              "classNames": [],
+                                              "classNameExpressions": [],
+                                              "style": "",
+                                              "children": []
+                                            }
+                                          ],
+                                          "isVisible": true
+                                        },
+                                        {
+                                          "type": "element",
+                                          "tagName": "h4",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "{feature.title}",
+                                              "id": 5366247,
+                                              "isVisible": true
+                                            }
+                                          ],
+                                          "id": 8758692,
+                                          "classNames": [
+                                            "text-lg",
+                                            "font-bold",
+                                            "mb-2"
+                                          ],
+                                          "isVisible": true,
+                                          "attributes": "{\n\n}",
+                                          "image": "",
+                                          "name": "",
+                                          "classNameExpressions": [],
+                                          "style": ""
+                                        },
+                                        {
+                                          "type": "element",
+                                          "tagName": "p",
+                                          "id": 8374460,
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "{feature.description}",
+                                              "id": 4192061,
+                                              "isVisible": true
+                                            }
+                                          ],
+                                          "classNames": [
+                                            "leading-relaxed",
+                                            "text-gray-600"
+                                          ],
+                                          "isVisible": true,
+                                          "attributes": "{\n\n}",
+                                          "image": "",
+                                          "name": "",
+                                          "classNameExpressions": [],
+                                          "style": ""
+                                        }
+                                      ],
+                                      "isVisible": true,
+                                      "image": "",
+                                      "name": "",
+                                      "classNameExpressions": [],
+                                      "style": ""
+                                    }
+                                  ],
+                                  "isVisible": true,
+                                  "objectType": "array"
+                                }
+                              ],
+                              "isVisible": true,
+                              "attributes": "{\n\n}",
+                              "image": "",
+                              "name": "",
+                              "classNameExpressions": [],
+                              "style": ""
+                            },
+                            {
+                              "type": "element",
+                              "tagName": "div",
+                              "id": 7558268,
+                              "classNames": [
+                                "md:w-1/2",
+                                "space-y-6"
+                              ],
+                              "children": [
+                                {
+                                  "type": "foreach",
+                                  "id": 8267618,
+                                  "valName": "feature",
+                                  "indexName": "index",
+                                  "objectName": "features.right",
+                                  "children": [
+                                    {
+                                      "type": "element",
+                                      "tagName": "div",
+                                      "id": 8104339,
+                                      "attributes": "{\n\tkey: index,\n}",
+                                      "classNames": [
+                                        "group",
+                                        "bg-white",
+                                        "p-5",
+                                        "transition",
+                                        "ease-out",
+                                        "duration-200",
+                                        "border-2",
+                                        "border-gray-200",
+                                        "rounded-2xl",
+                                        "hover:border-gray-300"
+                                      ],
+                                      "children": [
+                                        {
+                                          "type": "instance",
+                                          "componentId": 9616840,
+                                          "id": 8491002,
+                                          "attributes": "{\n\tcolor: feature.iconColor,\n  className: \"mb-6\",\n}",
+                                          "children": [
+                                            {
+                                              "type": "element",
+                                              "tagName": "feature.icon",
+                                              "id": 9853716,
+                                              "isVisible": true,
+                                              "attributes": "{\n\n}",
+                                              "image": "",
+                                              "name": "",
+                                              "classNames": [],
+                                              "classNameExpressions": [],
+                                              "style": "",
+                                              "children": []
+                                            }
+                                          ],
+                                          "isVisible": true
+                                        },
+                                        {
+                                          "type": "element",
+                                          "tagName": "h4",
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "{feature.title}",
+                                              "id": 1590368,
+                                              "isVisible": true
+                                            }
+                                          ],
+                                          "id": 2024964,
+                                          "classNames": [
+                                            "text-lg",
+                                            "font-bold",
+                                            "mb-2"
+                                          ],
+                                          "isVisible": true,
+                                          "attributes": "{\n\n}",
+                                          "image": "",
+                                          "name": "",
+                                          "classNameExpressions": [],
+                                          "style": ""
+                                        },
+                                        {
+                                          "type": "element",
+                                          "tagName": "p",
+                                          "id": 6703198,
+                                          "children": [
+                                            {
+                                              "type": "text",
+                                              "text": "{feature.description}",
+                                              "id": 3666248,
+                                              "isVisible": true
+                                            }
+                                          ],
+                                          "classNames": [
+                                            "leading-relaxed",
+                                            "text-gray-600"
+                                          ],
+                                          "isVisible": true,
+                                          "attributes": "{\n\n}",
+                                          "image": "",
+                                          "name": "",
+                                          "classNameExpressions": [],
+                                          "style": ""
+                                        }
+                                      ],
+                                      "isVisible": true,
+                                      "image": "",
+                                      "name": "",
+                                      "classNameExpressions": [],
+                                      "style": ""
+                                    }
+                                  ],
+                                  "isVisible": true,
+                                  "objectType": "array"
+                                }
+                              ],
+                              "isVisible": true,
+                              "attributes": "{\n\n}",
+                              "image": "",
+                              "name": "",
+                              "classNameExpressions": [],
+                              "style": ""
+                            }
+                          ],
+                          "isVisible": true,
+                          "attributes": "{\n\n}",
+                          "image": "",
+                          "name": "",
+                          "classNameExpressions": [],
+                          "style": ""
+                        }
+                      ],
+                      "isVisible": true,
+                      "attributes": "{\n\n}",
+                      "image": "",
+                      "name": "",
+                      "classNameExpressions": [],
+                      "style": ""
+                    }
+                  ],
+                  "isVisible": true,
+                  "attributes": "{\n\n}",
+                  "image": "",
+                  "name": "",
+                  "classNameExpressions": [],
+                  "style": ""
+                }
+              ],
+              "isVisible": true,
+              "attributes": "{\n\n}",
+              "image": "",
+              "name": "",
+              "classNameExpressions": [],
+              "style": ""
+            }
+          ],
+          "isVisible": true
+        }
+      ],
+      "code": "const features = {\n    // Left column\n    left: [\n      {\n        title: \"Customizable\",\n        description:\n          \"Fusce purus nisi, gravida sed consectetur ut, interdum quis nisi. Quisque egestas nisl id lectus facilisis scelerisque. Proin rhoncus dui at ligula vestibulum ut facilisis.\",\n        icon: HI.AdjustmentsVerticalIcon,\n        iconColor: \"orange\",\n      },\n      {\n        title: \"Rich Statistics\",\n        description:\n          \"Fusce purus nisi, gravida sed consectetur ut, interdum quis nisi. Quisque egestas nisl id lectus facilisis scelerisque. Proin rhoncus dui at ligula vestibulum ut facilisis.\",\n        icon: HI.ChartPieIcon,\n        iconColor: \"red\",\n      },\n    ],\n    // Right column\n    right: [\n      {\n        title: \"Works globally\",\n        description:\n          \"Fusce purus nisi, gravida sed consectetur ut, interdum quis nisi. Quisque egestas nisl id lectus facilisis scelerisque. Proin rhoncus dui at ligula vestibulum ut facilisis.\",\n        icon: HI.GlobeAmericasIcon,\n        iconColor: \"emerald\",\n      },\n      {\n        title: \"Lighting fast UI\",\n        description:\n          \"Fusce purus nisi, gravida sed consectetur ut, interdum quis nisi. Quisque egestas nisl id lectus facilisis scelerisque. Proin rhoncus dui at ligula vestibulum ut facilisis.\",\n        icon: HI.BoltIcon,\n        iconColor: \"purple\",\n      },\n    ],\n  };\n",
+      "id": 9212235,
+      "tags": [
+        "Features",
+        "Popular"
+      ],
+      "creator": "tailkit",
+      "description": "Features in two column grid with icons and decorations",
+      "isVisible": true,
+      "nameLibrary": "",
+      "muiStyle": "{\n\n}"
+    }
+  ]
+}
