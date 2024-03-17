@@ -1,7 +1,36 @@
 import React from "react";
 import Meta from "components/Meta";
-import Loans from "components/Loans";
+import Loans from "components/LoanPrograms";
 import ContactSection from "components/ContactSection";
+const loans = [
+  {
+    image:
+      'https://images.unsplash.com/photo-1465056836041-7f43ac27dcb5?fit=crop&w=800&h=600',
+    title: 'Equipment Loans',
+    description:
+      'Integer fermentum tincidunt auctor. Vestibulum ullamcorper, odio sed rhoncus imperdiet, enim elit sollicitudin orci, eget dictum sleo mi nec lectus.',
+    url: '/business-loans/home-ready-with-10k-grants',
+
+  },
+  {
+    image:
+      'https://images.unsplash.com/photo-1519681393784-d120267933ba?fit=crop&w=800&h=600',
+    title: 'Working Capital',
+
+    description:
+      'Integer fermentum tincidunt auctor. Vestibulum ullamcorper, odio sed rhoncus imperdiet, enim elit sollicitudin orci, eget dictum sleo mi nec lectus.',
+    url: '/business-loans/20-best-places-star-gazing',
+  
+  },
+  {
+    image:
+      'https://images.unsplash.com/photo-1501785888041-af3ef285b470?fit=crop&w=800&h=600',
+    title: 'Cash Advance',
+    description:
+      'Integer fermentum tincidunt auctor. Vestibulum ullamcorper, odio sed rhoncus imperdiet, enim elit sollicitudin orci, eget dictum sleo mi nec lectus.',
+    url: '/business-loans/how-to-explore-beautiful-lake',
+  },
+];
 
 function BusinessLoansPage(props) {
   return (
@@ -11,6 +40,7 @@ function BusinessLoansPage(props) {
         title="Business Loan Program"
         subtitle=""
         strapline=""
+        loans={loans}
         size="md"
         bgColor="bg-white"
         bgImage=""

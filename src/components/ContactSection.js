@@ -62,14 +62,16 @@ function ContactSection(props) {
             />
             <div className="opacity-70 mt-10">
               <h4 className="uppercase font-semibold tracking-wider mb-4">
-                Company Inc.
+                Phung Pham, 
               </h4>
               <div className="leading-relaxed">
-                1080 Sunshine Valley, Suite 2563
+              Loan Officer, NMLS# 2502864
+              <br />
+                Loan Factory Inc, CO-NMLS# 320841
                 <br />
-                San Francisco, CA 85214
+                <abbr title="Phone">P:</abbr> (832) 800-0207
                 <br />
-                <abbr title="Phone">P:</abbr> (123) 456-7890
+                <abbr title="Email">E:</abbr> phung.pham@loanfactory.com
               </div>
             </div>
           </div>

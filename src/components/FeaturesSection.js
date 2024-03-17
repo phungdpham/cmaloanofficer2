@@ -21,28 +21,6 @@ function FeaturesSection(props) {
       icon: HomeIcon,
       iconColor: "orange",
     },
-    // {
-    //   title: "Rich Statistics",
-    //   description:
-    //     "Fusce purus nisi, gravida sed consectetur ut, interdum quis nisi. Quisque egestas nisl id lectus facilisis scelerisque. Proin rhoncus dui at ligula vestibulum ut facilisis.",
-    //   icon: ChartPieIcon,
-    //   iconColor: "red",
-    // },
-
-    // {
-    //   title: "Works globally",
-    //   description:
-    //     "Fusce purus nisi, gravida sed consectetur ut, interdum quis nisi. Quisque egestas nisl id lectus facilisis scelerisque. Proin rhoncus dui at ligula vestibulum ut facilisis.",
-    //   icon: GlobeAmericasIcon,
-    //   iconColor: "emerald",
-    // },
-    // {
-    //   title: "Lighting fast UI",
-    //   description:
-    //     "Fusce purus nisi, gravida sed consectetur ut, interdum quis nisi. Quisque egestas nisl id lectus facilisis scelerisque. Proin rhoncus dui at ligula vestibulum ut facilisis.",
-    //   icon: BoltIcon,
-    //   iconColor: "purple",
-    // },
     {
       title: "Business Loan",
       description:

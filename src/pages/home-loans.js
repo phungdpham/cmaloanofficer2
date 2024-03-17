@@ -1,7 +1,37 @@
-import React from "react";
-import Meta from "components/Meta";
-import Loans from "components/Loans";
-import ContactSection from "components/ContactSection";
+import React from 'react';
+import Meta from 'components/Meta';
+import Loans from 'components/LoanPrograms';
+import ContactSection from 'components/ContactSection';
+
+const loans = [
+  {
+    image:
+      'https://images.unsplash.com/photo-1465056836041-7f43ac27dcb5?fit=crop&w=800&h=600',
+    title: '$10,000 Grants for First Time Home Buyers',
+    description:
+      'Integer fermentum tincidunt auctor. Vestibulum ullamcorper, odio sed rhoncus imperdiet, enim elit sollicitudin orci, eget dictum sleo mi nec lectus.',
+    url: '/home-loans/home-ready-with-10k-grants',
+
+  },
+  {
+    image:
+      'https://images.unsplash.com/photo-1519681393784-d120267933ba?fit=crop&w=800&h=600',
+    title: '1% Down Payment 2% Grants',
+
+    description:
+      'Integer fermentum tincidunt auctor. Vestibulum ullamcorper, odio sed rhoncus imperdiet, enim elit sollicitudin orci, eget dictum sleo mi nec lectus.',
+    url: '/home-loans/20-best-places-star-gazing',
+  
+  },
+  {
+    image:
+      'https://images.unsplash.com/photo-1501785888041-af3ef285b470?fit=crop&w=800&h=600',
+    title: 'VA Loans',
+    description:
+      'Integer fermentum tincidunt auctor. Vestibulum ullamcorper, odio sed rhoncus imperdiet, enim elit sollicitudin orci, eget dictum sleo mi nec lectus.',
+    url: '/home-loans/how-to-explore-beautiful-lake',
+  },
+];
 
 function HomeLoansPage(props) {
   return (
@@ -11,6 +41,7 @@ function HomeLoansPage(props) {
         title="Home Loan Programs"
         subtitle=""
         strapline=""
+        loans={loans}
         size="md"
         bgColor="bg-white"
         bgImage=""
