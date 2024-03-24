@@ -5,9 +5,9 @@ const endpoint = `${process.env.NEXT_PUBLIC_AIRTABLE_ENDPOINT}?tableName=${proce
 function submit(data) {
   return apiRequestExternal(endpoint, "POST", [
     {
-      Name: data.name,
-      Email: data.email,
-      Message: data.message,
+      name: data.name,
+      phone: data.phone,
+      // Message: data.message,
     },
   ]);
 }

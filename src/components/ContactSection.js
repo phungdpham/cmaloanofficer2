@@ -87,7 +87,7 @@ function ContactSection(props) {
               )}
 
               <form className="space-y-6" onSubmit={handleSubmit(onSubmit)}>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div className="grid grid-cols-1  gap-6">
                   <div>
                     <TextField
                       type="text"
@@ -96,7 +96,9 @@ function ContactSection(props) {
                       name="name"
                       placeholder=""
                       error={errors.name}
-                      inputRef={register()}
+                      inputRef={register({
+                        required: "Please enter Your name"
+                      })}
                     />
                   </div>
                   <div>
@@ -109,24 +111,13 @@ function ContactSection(props) {
                       error={errors.phone}
                       inputRef={register({
                         required: "Please enter phone number",
+                        pattern: /^\(?(\d{3})\)?[- ]?(\d{3})[- ]?(\d{4})$/,
                       })}
+
                     />
                   </div>
                 </div>
-                <div>
-                  <TextField
-                    type="textarea"
-                    label="Message"
-                    id="message"
-                    name="message"
-                    placeholder=""
-                    error={errors.message}
-                    rows={6}
-                    inputRef={register({
-                      required: "Please enter a message",
-                    })}
-                  />
-                </div>
+               
                 <Button
                   type="submit"
                   size="lg"
